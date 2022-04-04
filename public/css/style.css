@@ -1,4 +1,4 @@
-/* CONTAINER */
+/* ---------------- CONTAINER ---------------- */
 .container{
     display: grid;
     width: 75%;
@@ -16,30 +16,31 @@
 .container {
     border: 1px solid black;
 }
-/* HEADER */
+/* ---------------- HEADER ---------------- */
 header{
     grid-area: hdr;
 }
-/* SECTION 1 */
+#banner{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+/* ---------------- SECTION 1 ---------------- */
 section:nth-child(1){
     grid-area: sect1;
     
 }
-/* SECTION 2 */
+/* ---------------- SECTION 2 ---------------- */
 section:nth-child(2){
     grid-area: sect2;
     
 }
-/* SECTION  */
+/* ---------------- SECTION ---------------- */
 section:nth-child(3){
     grid-area: sect3;
     
 }
+/* ---------------- footer ---------------- */
 footer{
     grid-area: ftr;
-}
-.banner{
-    width: 100%;
-    padding: 0;
-    margin: 0;
 }
