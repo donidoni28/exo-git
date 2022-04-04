@@ -19,11 +19,55 @@
 /* ---------------- HEADER ---------------- */
 header{
     grid-area: hdr;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-areas: 
+        "brand ul"
+        "banner banner"
+    ;
+}
+#brand{
+    grid-area: brand;
+    width: 100%;
+}
+header > ul {
+    grid-area: ul;
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 
+        "l-i1 l-i2 l-i3 l-i4 l-i5 l-i6"
+    ;    
+}
+header > ul img {
+    /* width: 100%; */
+}
+.list-items:nth-child(1){
+    grid-area: l-i1;
+}
+.list-items:nth-child(2){
+    grid-area: l-i2;
+}
+.list-items:nth-child(3){
+    grid-area: l-i3;
+}
+.list-items:nth-child(4){
+    grid-area: l-i4;
+}
+.list-items:nth-child(5){
+    grid-area: l-i5;
+}
+.list-items:nth-child(6){
+    grid-area: l-i6;
+}
+
+.list-items {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
 }
 #banner{
+    grid-area: banner;
     width: 100%;
-    padding: 0;
-    margin: 0;
 }
 /* ---------------- SECTION 1 ---------------- */
 section:nth-child(1){
