@@ -1,8 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 /* ---------------- CONTAINER ---------------- */
 .container{
     display: grid;
     width: 75%;
     margin: 0 auto;
+    box-shadow: 1px 1px 20px 4px #6a6a6f;
     grid-template-areas: 
         'hdr'
         'sect1'
@@ -18,73 +23,71 @@
 }
 /* ---------------- HEADER ---------------- */
 header{
-    grid-area: hdr;
     display: grid;
-    grid-template-columns: 1fr 7fr;
     grid-template-areas: 
-        "brand ul"
-        "banner banner"
+    'hdr'
+    'img'
     ;
 }
-#brand{
-    grid-area: brand;
-    width: 100%;
-}
-header > ul {
-    grid-area: ul;
-    list-style: none;
-    padding: 0;
+#header{
+    grid-area: hdr;
+    background-color: black;
     display: grid;
+    align-items: center;
+    padding: 10px 0;
     grid-template-areas: 
-        "l-i1 l-i2 l-i3 l-i4 l-i5 l-i6"
-    ;    
+        'hdr-img hdr-ul'
+    ;
+    /* background: black; */
 }
-header > ul img {
-    /* width: 100%; */
-}
-.list-items:nth-child(1){
-    grid-area: l-i1;
-}
-.list-items:nth-child(2){
-    grid-area: l-i2;
-}
-.list-items:nth-child(3){
-    grid-area: l-i3;
-}
-.list-items:nth-child(4){
-    grid-area: l-i4;
-}
-.list-items:nth-child(5){
-    grid-area: l-i5;
-}
-.list-items:nth-child(6){
-    grid-area: l-i6;
+#header > img {
+    grid-area: hdr-img;
 }
 
-.list-items {
+#header ul {
+    grid-area: hdr-ul;
     display: grid;
-    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    grid-template-areas: 
+        'l-1 l-2 l-3 l-4 l-5 l-6'
+    ;
+    list-style: none;
 }
-#banner{
-    grid-area: banner;
+.list-items{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
+}
+.list-items a {
+    color: white;
+    text-decoration: none;
+}
+header > img {
+    display: none;
+    grid-area: img;
+    border: 1px solid blue;
     width: 100%;
 }
 /* ---------------- SECTION 1 ---------------- */
-section:nth-child(1){
+section:nth-of-type(1){
     grid-area: sect1;
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+
 /* ---------------- SECTION 2 ---------------- */
-section:nth-child(2){
+section:nth-of-type(2){
     grid-area: sect2;
-    
+    display: grid;
 }
 /* ---------------- SECTION ---------------- */
-section:nth-child(3){
+section:nth-of-type(3){
     grid-area: sect3;
-    
 }
 /* ---------------- footer ---------------- */
 footer{
     grid-area: ftr;
+    background: black;
 }
